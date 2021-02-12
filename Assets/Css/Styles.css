@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+body{
+	margin: 0px;
+	font-family: 'Roboto', sans-serif;
+	color:#fff;
+	background-color: #c01f2f;
+}
+
+@media (min-width: 1024px) {
+
+.grid{
+	display: grid;
+	grid-template-areas:
+    'item1 item2 item3'
+    'item4 item5 item3'
+    'item6 item7 item3';
+	height: 100vh;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 1fr);
+
+}
+}
+
+.item1{
+	grid-area: item1;
+}
+.item2{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	grid-area: item2;
+	background-color:#fff;
+}
+.item2 form{
+	text-align: center;
+}
+.item2 button{
+  	border-radius: 5px;
+	padding: 10px 40px;
+	background-color: #c01f2f;
+	border:none;
+	color:#fff;
+}
+.item2 input{
+	padding: 10px;
+	border: 1px solid #bfbfbf;
+	background-color:#f8f8f8;
+  	border-radius: 5px;
+  	margin-bottom: 25px; 
+}
+.item3{
+	grid-area: item3;
+	background-image: url("../Img/1.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+.item4{
+	grid-area: item4;
+	background-image: url("../Img/2.jpg");
+	background-position: center;
+	background-size: cover;
+}
+.item5{
+	grid-area: item5;
+	align-self:center;
+	justify-self:center;
+}
+.item5 p{
+	font-size: 25px;
+	font-weight: 300;
+	margin:0px;
+}
+.item5 h1{
+	margin:0px;
+	font-size: 85px;
+}
+
+.item6{
+	grid-area: item6;
+}
+.item7{
+	grid-area: item7;
+	background-image: url("../Img/3.jpg");
+	background-position: center;
+	background-size: cover;
+}
+.Answer{
+	margin-top: 5px;
+	color: #2f2d2d;
+}
+@media only screen and (max-width: 1024px) and (min-width: 700px) {  
+
+.grid{
+	display: grid;
+	grid-template-areas:
+    'item1 item2 '
+    'item4 item5 '
+    'item6 item7 ';
+	height: 100vh;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+
+}
+}
+
+@media only screen and (max-width: 700px) and (min-width: 320px) {  
+
+.grid{
+	display: grid;
+	grid-template-areas:
+    'item2'
+    'item5'
+    'item4'
+    'item1'
+    'item7';
+	height: 100vh;
+	grid-template-rows: repeat(5, 240px);
+	grid-template-columns: repeat(1, 1fr);
+
+}
+}
